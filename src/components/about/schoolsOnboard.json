@@ -1,0 +1,5 @@
+[
+    {"name": "Harvard University", "lon": -71.116943, "lat": 42.374443, "mapImg": "MapTag_Harvard"}, 
+    {"name": "Loyola University Chicago", "lon": -87.6578, "lat": 41.9999, "mapImg": "MapTag_LUC"}, 
+    {"name": "Yale University", "lon": -72.9223, "lat": 41.3163, "mapImg": "MapTag_Yale"}
+]

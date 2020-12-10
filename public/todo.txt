@@ -1,0 +1,12 @@
+6. update profile cards
+    - add outline to photos
+    - instead of expanding, have text appear as an overlay over the card -- due to layout/size concerns
+
+11. make register now button go fully black on hover
+12. re-title walkthrough -- how to get started
+    - numbering/arrows
+    - increase spacing between screenshot and image
+13. animations:
+    - slide in screenshot
+    - animate walkthrough graphics in sequence
+14. update map background
