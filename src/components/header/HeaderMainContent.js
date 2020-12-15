@@ -3,6 +3,7 @@ import { makeStyles, withStyles } from '@material-ui/core/styles';
 import { Button, Grid, Box } from '@material-ui/core';
 import { Link as Scroll} from 'react-scroll'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import { Autorenew } from '@material-ui/icons';
 
 /* not sure if we should have this or just hard code the number of schools 
 -- this could unnecessarily slow up the page  */ 
@@ -14,7 +15,7 @@ const ColorButton = withStyles((theme) => ({
       backgroundColor: 'rgba(255, 112, 112, 0.5)',
       textTransform: 'none', 
       '&:hover': {
-        backgroundColor: 'rgb(255, 143, 143)',
+        backgroundColor: 'rgb(68, 199, 146)',
         color: 'black', 
       },
       display: 'flex',
@@ -41,71 +42,55 @@ const useStyles = makeStyles((theme) => ({
     root: {
         minHeight: '100vh', 
         display: 'flex', 
-        justifyContent: 'center', 
+        justifyContent: 'left', 
         alignItems: 'center', 
         flexWrap: 'wrap',
-        marginLeft: 'auto',
-        marginRight: 'auto',
+        padding:  '0',
+        margin: '0',
     }, 
-    bigGrid: {
-        [theme.breakpoints.down('sm')]: {
-            textAlign: 'center',
-            marginLeft: 'auto',
-            marginRight: 'auto',
-          },
-    },
-    connect: {
-        marginTop: '3rem',
-        maxWidth: '425px',
-        width: '100%',
-    },
-    text: {
-        lineHeight: .0001,
-    },
     title: {
-        fontFamily: 'Poppins',
+        fontFamily: 'Playfair Display',
         fontSize: 'calc(4rem + 1vw)',
-        color: 'rgb(255, 143, 143,1)',
-        textShadow: '4px 4px rgba(0, 0, 0, 0.2)',
+        color: 'white',
         lineHeight: .9,
-        marginTop: '5px',
-        marginBottom: '0px',
-        margin: '10px',
+        marginTop: '100px',
+        paddingTop: '30px',
+        marginBottom: '0',
+        marginLeft: '5%',
 
     },
+    subcontainer: {
+        backgroundColor: 'rgba(255,255,255,.95)',
+        padding: '20px',
+        paddingLeft: '40px',
+        marginLeft: '30px',
+        boxShadow: '8px 15px black',
+    },
     subtitle: {
+        textAlign: 'left',
         fontFamily: 'Poppins',
-        fontSize: '2rem',
+        fontSize: '1.2rem',
         color: 'rgb(48, 46, 65)',
         lineHeight: 1,
-        marginLeft: '10px',
-        marginTop: '5px',
+        color: 'black',
+    },
+
+    graphicContainer: {
+        alignContent: 'right',
+        marginTop: '0',
         marginBottom: '5px',
     },
 
-    boxes: {
-        marginLeft: 'auto',
-        marginRight: 'auto',
-    },
-   
-    learnMoreBox: {
-        backgroundColor: 'rgb(255, 143, 143, 0.5)',
-        borderRadius: '5px',
-        height: '100%',
-
+    mainGraphic: {
+        width: 'calc(10rem + 10vw)',
+        height: 'auto',
     },
 
-    boxesText: { 
-        marginTop: '5%', 
-        marginBottom: '5%',
-        padding: '3px', 
-        textAlign: 'center', 
-        fontFamily: 'Poppins', 
-        fontWeight: '500',
-        fontSize: '1rem', 
-        color: 'rgba(0,0,0,1)',
+    textContainer: {
+        alignContent: 'center',
+        marginTop: '0',
+        marginBottom: '5px',
     }
-
 })) 
 
 export default function HeaderMainContent() {
@@ -113,75 +98,26 @@ export default function HeaderMainContent() {
 
     return(
         <div className={classes.root}>
+            <h1 className={classes.title}>Tackling global challenges, <br/> <div style={{color: '#44C792'}}>together.</div></h1><br/>
             <Grid
                 container
                 spacing={2}
                 justify="center"
                 alignItems="center"
                 className={classes.bigGrid}
-                style={{marginBottom:'0px'}}
+                style={{margin:'0', paddingTop: '0',}}
             >
-                <Grid item xs={5} md={4} >
-                    <div>
-                        <img src={`${process.env.PUBLIC_URL + '/assets/connect.png'}`}  className={classes.connect} alt="connect-icon"></img>
+                <Grid item xs={5} md={8} className={classes.textContainer}>
+                    <div className={classes.subcontainer}>
+                        <img src={`${process.env.PUBLIC_URL + '/assets/mint_full_logo.png'}`} alt='21mint logo' style={{width: '125px', height: 'auto', padding: '0', margin: '0'}}></img>
+                        <p className={classes.subtitle}>Our generation is facing a number of global challenges, and we are building a platform for greater collaboration and efficiency at developing solutions.</p>
+                        <p className={classes.subtitle}>If you're interested in joining our community, sign up to be notified when we launch. </p>
                     </div>             
                 </Grid>
-                
-                <Grid item container 
-                    xs={12} md={6} 
-                    
-                    spacing={1}
-                    justify='flex-start'
-                    alignItems='center'
-                >
-                    <Grid item xs={12}>
-                        <div className={classes.text}> 
-                        <h1 className={classes.title}>campfire<br/> <div style={{color: 'rgb(48, 46, 65)', padding: '0px'}}>convos</div> </h1><br/>
-                        <p className={classes.subtitle}> illuminating our <br/> <b style={{color: 'rgb(255, 143, 143, 0.8)', padding: '0px'}}> hidden similarities.</b></p> 
-                        </div>
-                    </Grid>
-                            
-                    <Grid item container  
-                        direction='row' 
-                        alignItems='stretch' 
-                        spacing={4} 
-                        xs={12}
-                        className={classes.boxes}
-                    >
-                        <Grid item xs={6} >
-                            <Box display='flex' className={classes.learnMoreBox}> 
-                                <Grid container direction='row' justify='center' alignItems="center" className={classes.boxesText}>
-                                    <Grid item xs={9}>
-                                        <Box>Sign up within minutes with your college email.</Box>
-                                    </Grid>
-                                        
-                                    <Grid item xs={12}>
-                                        <ColorButton
-                                            onClick={(e) => {
-                                            e.preventDefault();
-                                            window.location.href="https://campfireconvos.com/registration";}}
-                                            style={{padding: '1rem', marginLeft: 'auto', marginRight: 'auto'}}
-                                        > 
-                                            <b style={{fontSize: '1rem', padding: '0px'}}> register now  </b>
-                                        </ColorButton> 
-                                    </Grid>
-                                       
-                                </Grid>      
-                            </Box>
-                        </Grid>
-                            
-                        <Grid item xs={6}>
-                            <Box display='flex' className={classes.learnMoreBox}> 
-                                <Grid container direction='row' justify='center' alignItems="center" className={classes.boxesText}>
-                                    <Grid item xs={8}>
-                                        <Box> Learn more about Campfire.</Box>
-                                    </Grid>
-                                    <Grid item xs={12} style={{paddingTop: '5px'}}> <Scroll to="about" smooth={true}> <CustomExpandMore /> </Scroll> </Grid>
-                                </Grid>
-                            </Box>
-                        </Grid> {/* END OF BUTTONS BELOW MAIN TEXT */}
-                    </Grid> {/* CONTAINER FOR BUTTONS */}        
-                </Grid> {/* END OF TEXT GRID */}
+                <Grid item xs={5} md={4} className={classes.graphicContainer}>
+                    <img className={classes.mainGraphic} src={`${process.env.PUBLIC_URL + '/assets/main_graphic.png'}`} ></img>
+            
+                </Grid>
             </Grid>
         </div>
     )

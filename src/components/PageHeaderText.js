@@ -12,17 +12,12 @@ const useStyles = makeStyles((theme) => ({
         marginRight: 'auto',
         
     },
-    border: {
-        borderBottom: "3px solid lightgray",
-        width: "100%"
-    },
     title: {
-        weight: '400',
-        color: 'rgb(255, 143, 143,1)',
-        fontFamily: 'Poppins',
+        color: 'white',
+        fontFamily: 'Playfair Display',
+        fontWeight: 'bold',
         fontSize: 'calc(3rem + 1vw)',
-        textShadow: '3px 3px rgba(211,211,211, 1)',
-        whiteSpace: 'nowrap',
+
     },
 })); 
 
@@ -31,9 +26,8 @@ export default function PageHeaderText({header}) {
     const classes = useStyles();  
     return (
             <div className={classes.container}>
-                <div className={classes.border} />
-                        <span className={classes.title}> {header.text} </span>
-                <div className={classes.border} />
+                <span className={classes.title}> {header.text} </span>
+
             </div>
     
     )

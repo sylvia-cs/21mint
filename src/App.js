@@ -10,7 +10,7 @@ import Footer from './components/Footer';
 const useStyles = makeStyles((theme) => ({
   root: {
     minHeight: '100vh', 
-    background: 'white',
+    background: 'linear-gradient(170deg, black 40%, #44C792 5%, #44C792 45%)',
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
     width: '100vw',
@@ -28,7 +28,6 @@ export default function App() {
       
       <Header />
       <About />
-      <OurTeam />
       <Footer />
     </div>
   );

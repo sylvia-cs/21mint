@@ -26,11 +26,15 @@ const useStyles = makeStyles((theme) => ({
     },
 
     title: {
-        fontFamily: 'Poppins',
-        fontSize: '2rem',
+        fontFamily: 'Playfair Display',
+        fontSize: '2.5rem',
         color: 'rgb(0,0,0,1)',
         fontWeight: 'bold',
-        lineHeight: .9,
+        lineHeight: .3,
+        paddingLeft: '20px',
+        paddingRight: '20px',
+        paddingTop: '0',
+        paddingBottom: '0',
         },
     section: {
         height: '100%',
@@ -62,7 +66,8 @@ export default function() {
                 
                 
                 <Grid item className={classes.section} xs={12}>
-                    <h1 className={classes.title}>so, what do you want to connect about?</h1>
+                    <h1 className={classes.title}>Collaborate on issues you are</h1>
+                    <h1 className={classes.title}>most passionate about.</h1>
                     <TagArray tags={landingPageTags} chipStyle={chipStyle} />
                 </Grid>
             </Grid>

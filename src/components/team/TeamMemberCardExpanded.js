@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
     //boxShadow: '0 4px 7px 3px rgba(255, 142, 164, 0.3)',
     justifyContent: "center",
     alignItems: "center",
-    fontFamily: 'Poppins', 
+    fontFamily: 'Playfair Display', 
     textAlign: "center",
     color: 'black', 
     marginLeft: 'auto',
@@ -45,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: '0px',
   },
   name: {
-    fontFamily: 'Poppins',
+    fontFamily: 'Playfair Display',
     fontSize: '1.2rem', 
     fontWeight: '500',
     marginBottom: '-20px', 
@@ -66,7 +66,7 @@ const useStyles = makeStyles((theme) => ({
     padding: '5px',
   },
   bio: {
-    fontFamily: 'Poppins',
+    fontFamily: 'Playfair Display',
     fontSize: '1rem',
     textAlign: "center",
     color: "#000",

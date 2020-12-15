@@ -61,7 +61,7 @@ const CustomNextArrow = withStyles((theme) => (
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    fontFamily: 'Poppins',
+    fontFamily: 'Playfair Display',
     textAlign: 'center',
     justifyContent: 'center', alignItems: 'center',
     

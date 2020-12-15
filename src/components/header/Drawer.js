@@ -12,14 +12,14 @@ import { Link as Scroll} from 'react-scroll'
 const useStyles = makeStyles({
   list: {
     width: 250,
-    background: 'rgba(255, 143, 143, 1)',
-    
+    background: 'rgb(68, 199, 146)',
+
   },
   fullList: {
     width: 'auto',
   },
   icon: {
-    color: 'rgb(48, 46, 65)', 
+    color: 'rgba(48, 46, 65, 1)', 
     margin: '0 auto',
     fontSize:'2rem',
     flexGrow: 5,
@@ -55,8 +55,8 @@ export default function Drawer() {
     setState({ ...state, [anchor]: open });
   };
 
-  var toolBarItems = [["about", "about"], ["ourTeam", "our team"], ];
-  const names = ['register', 'login'];
+  var toolBarItems = [["about", "about"] ];
+  const names = ['register'];
   const list = (anchor) => (
     <div
       className={clsx(classes.list, {

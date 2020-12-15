@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
         borderBottom: '5em soild white', 
     },
     appbarWrapper: {
-        width: '90%',
+        width: '100%',
         margin: '0 auto', 
         height: '30px'
          
@@ -87,7 +87,7 @@ export default function Header() {
                     <Scroll to="header" smooth={true} className={classes.appbarLogo}>
                         <h1>
                             <Button>
-                                <img src={`${process.env.PUBLIC_URL + '/assets/firelogo_purple.png'}`} width='35' height='35' alt="campfire-appbar-icon"/>
+                                <img src={`${process.env.PUBLIC_URL + '/assets/mint_logo.png'}`} width='35' height='35' alt="logo"/>
                             </Button>
                         </h1>
                     </Scroll>

@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
         padding: '20px',
     },
     title: {
-        fontFamily: 'Poppins',
+        fontFamily: 'Playfair Display',
         fontSize: '3rem',
         weight: '400',
         color: 'rgb(255, 143, 143,1)',

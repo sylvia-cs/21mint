@@ -62,10 +62,10 @@ export default function Footer() {
                 <div className={classes.content}> 
                     <h5> want to get in touch? <br/>
                         <Button
-                            href={`mailto:info@campfireconvos.com?subject=Campfire Convos Inquiry`}
+                            href={`mailto:info@campfireconvos.com?subject=Problem Solving Web Form Contact`}
                             target="_top"
                             rel="noopener noreferrer"
-                            style={{textTransform: 'none', color: 'rgb(48, 46, 65)', fontSize: '1.5rem', fontFamily: 'Poppins'}}
+                            style={{textTransform: 'none', color: 'rgb(48, 46, 65)', fontSize: '1.5rem', fontFamily: 'Playfair Display'}}
                         >
                             <MailOutlineIcon classes={{root: classes.mailIcon}}/>
                         </Button>

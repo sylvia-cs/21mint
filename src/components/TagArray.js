@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
     '& > *': {
       margin: theme.spacing(0.5),
     },
-    fontFamily: 'Poppins',
+    fontFamily: 'Playfair Display',
   },
   chip: {
     backgroundColor: '#ffffff',
