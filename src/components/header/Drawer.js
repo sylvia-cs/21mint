@@ -88,8 +88,8 @@ export default function Drawer() {
                     style={{textTransform: 'none', fontFamily: 'Poppins'}}
                     onClick={(e) => {
                         e.preventDefault();
-                        name === 'register' ? window.location.href="https://campfireconvos.com/registration" : 
-                        window.location.href="https://campfireconvos.com/login" ;
+                        name === 'register' ? window.location.href=`${process.env.PUBLIC_URL}` : 
+                        window.location.href=`${process.env.PUBLIC_URL}` ;
                     }}
                 >
                     {name} 

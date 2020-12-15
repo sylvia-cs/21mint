@@ -76,8 +76,8 @@ export default function Header() {
     const classes = useStyles(); 
     const trigger = useScrollTrigger();
 
-    var toolBarItems = [["about", "about"], ["ourTeam", "our team"], ]
-    const names = ['register', 'login']
+    var toolBarItems = [["about", "about"], ]
+    const names = ['register']
     
     return(
         <div className={classes.root} id='header'>
@@ -115,8 +115,8 @@ export default function Header() {
                                             style={{textTransform: 'none', fontFamily: 'Poppins', color: 'rgb(48, 46, 65)'}}
                                             onClick={(e) => {
                                                 e.preventDefault();
-                                                name === 'register' ? window.location.href="https://campfireconvos.com/registration" : 
-                                                window.location.href="https://campfireconvos.com/login" ;
+                                                name === 'register' ? window.location.href=`${process.env.PUBLIC_URL}` : 
+                                                window.location.href=`${process.env.PUBLIC_URL}` ;
                                             }}
                                         >
                                            {name} 

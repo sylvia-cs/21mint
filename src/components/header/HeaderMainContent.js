@@ -111,7 +111,7 @@ export default function HeaderMainContent() {
                     <div className={classes.subcontainer}>
                         <img src={`${process.env.PUBLIC_URL + '/assets/mint_full_logo.png'}`} alt='21mint logo' style={{width: '125px', height: 'auto', padding: '0', margin: '0'}}></img>
                         <p className={classes.subtitle}>Our generation is facing a number of global challenges, and we are building a platform for greater collaboration and efficiency at developing solutions.</p>
-                        <p className={classes.subtitle}>If you're interested in joining our community, sign up to be notified when we launch. </p>
+                        <p className={classes.subtitle}>If you're interested in joining our community, sign up below to be notified when we launch. </p>
                     </div>             
                 </Grid>
                 <Grid item xs={5} md={4} className={classes.graphicContainer}>
